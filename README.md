@@ -4,8 +4,6 @@ Node.js app that listens for `Repository.create` webhooks from a GitHub Enterpri
 
 ## Build the image
 
-* Configure wanted team access level at: https://github.com/jwiebalk/ghec-new-repo-add-team/blob/master/server.js#L12
-
 * Build the image locally
 
 ```
