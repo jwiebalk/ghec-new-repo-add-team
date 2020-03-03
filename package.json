@@ -1,0 +1,14 @@
+{
+  "name": "ghes-new-org-repo-add-team",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "John Wiebalk <jwiebalk@github.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "github-webhook-handler": "*",
+    "http": "*"
+  }
+}
