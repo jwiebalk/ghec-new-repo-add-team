@@ -4,12 +4,9 @@ var handler = createHandler({ path: '/webhook', secret: (process.env.SECRET)})
 
 var dotcom = 'api.github.com'
 var team_name = process.env.GHE_TEAM_NAME
-var team_access = "pull" // pull,push,admin options here
+var team_access = process.env.GHE_TEAM_ACCESS // pull,push,admin options here
 var team_id = ""
 
-var org_repos = []
-
-// var creator = ""
 
 http.createServer(function (req, res) {
   handler(req, res, function (err) {
@@ -47,7 +44,8 @@ const options = {
   method: 'GET',
   headers: {
     'Authorization': 'token ' + (process.env.GHE_TOKEN),
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'User-Agent': 'NodeJS'
   }
 }
 let body = [];
@@ -97,7 +95,8 @@ const options = {
   headers: {
     'Authorization': 'token ' + (process.env.GHE_TOKEN),
     'Content-Type': 'application/json',
-    'Content-Length': data.length
+    'Content-Length': data.length,
+    'User-Agent': 'NodeJS'
   }
 }
 let body = [];
