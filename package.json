@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "github-webhook-handler": "*",
-    "http": "*"
+    "http": "*",
+    "dotenv": "*"
   }
 }
